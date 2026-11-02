@@ -3,243 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Una introducción a la conciencia digitalizada, sus tecnologías actuales y sus preguntas éticas.">
-    <title>Conciencia digitalizada | Industria 4.0</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        :root {
-            color-scheme: dark;
-            --fondo: #091311;
-            --superficie: #101d19;
-            --borde: #294238;
-            --texto: #e7eee8;
-            --suave: #aab9ae;
-            --cian: #69e2d0;
-            --lima: #d3ef8a;
-            --ambar: #f0bd73;
-        }
-
-        * { box-sizing: border-box; }
-
-        body {
-            background-color: var(--fondo);
-            background-image: radial-gradient(ellipse at 82% 8%, rgba(52, 112, 88, 0.2), transparent 34%),
-                linear-gradient(135deg, rgba(20, 43, 34, 0.48), transparent 48%);
-            color: var(--texto);
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            color: var(--cian);
-            font-size: 32px;
-            text-align: center;
-        }
-
-        h2 {
-            color: var(--lima);
-            font-size: 28px;
-            text-align: center;
-        }
-
-        h3 { color: var(--cian); }
-
-        p {
-            color: var(--suave);
-            font-size: 16px;
-            line-height: 1.7;
-        }
-
-        img {
-            width: 300px;
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
-            display: block;
-            margin: 15px auto;
-            object-fit: cover;
-            box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.65);
-        }
-
-        .hero-section {
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(115deg, rgba(16, 29, 25, 0.97), rgba(15, 47, 39, 0.84) 62%, rgba(34, 73, 57, 0.64));
-            border: 1px solid var(--borde);
-            border-radius: 15px;
-        }
-
-        .hero-section::after {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: min(34%, 300px);
-            height: 100%;
-            background: repeating-linear-gradient(135deg, transparent 0 17px, rgba(105, 226, 208, 0.08) 18px 19px);
-            content: "";
-            pointer-events: none;
-        }
-
-        .section-line { border-top: 1px solid var(--borde); }
-        .eyebrow { color: var(--ambar); font-size: 12px; font-weight: 700; text-transform: uppercase; }
-        .tech-item { border-top: 2px solid var(--borde); padding-top: 18px; }
-        .step-number { color: var(--ambar); font-size: 14px; font-weight: 700; }
-        .quiz-option {
-            width: 100%;
-            border: 1px solid #48695b;
-            border-radius: 6px;
-            background: #172820;
-            color: var(--texto);
-            cursor: pointer;
-            font: inherit;
-            padding: 12px 16px;
-            text-align: left;
-            transition: background-color 160ms ease, border-color 160ms ease;
-        }
-        .quiz-option:hover, .quiz-option:focus-visible { background: #203b2e; border-color: var(--cian); }
-        .quiz-option:focus-visible, a:focus-visible { outline: 2px solid var(--lima); outline-offset: 3px; }
-        .quiz-option:disabled { cursor: default; opacity: 0.72; }
-        .quiz-option.correct { border-color: var(--lima); color: var(--lima); }
-        .quiz-option.incorrect { border-color: var(--ambar); color: var(--ambar); }
-        .result-text { color: var(--texto); }
-        .text-link { color: var(--cian); text-decoration: underline; text-underline-offset: 3px; }
-
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
-        }
-    </style>
+    <meta name="description" content="Proyecto escolar sobre conciencia digitalizada y la Industria 4.0.">
+    <title>Conciencia digitalizada - Industria 4.0</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="min-h-screen px-4 py-5 md:px-8 md:py-8">
-    <header class="hero-section mx-auto mb-12 max-w-5xl px-6 py-10 md:px-12 md:py-14">
-        <div class="relative z-10 mx-auto max-w-3xl text-center">
-            <p class="eyebrow">Mente · tecnología · futuro</p>
-            <h1 class="mt-3">Conciencia digitalizada</h1>
-            <p class="mt-4 max-w-2xl text-slate-200">
-                ¿Podría una máquina reproducir una mente? Un recorrido por lo que la ciencia ya puede hacer y lo que todavía pertenece a la especulación.
-            </p>
-            <a class="text-link mt-5 inline-block" href="#concepto">Explorar el tema <span aria-hidden="true">↓</span></a>
-        </div>
+<body>
+    <header>
+        <h1>Conciencia digitalizada</h1>
+        <p>Proyecto sobre la mente humana y las tecnologías de la Industria 4.0</p>
     </header>
 
-    <main class="mx-auto max-w-5xl space-y-14">
-        <section id="concepto" class="grid items-center gap-8 md:grid-cols-[1.2fr_0.8fr] md:gap-12">
-            <div>
-                <p class="eyebrow">01 / La idea</p>
-                <h2 class="mt-2">¿Qué significa digitalizar la conciencia?</h2>
-                <p class="mt-4">
-                    Es la hipótesis de que algún día se podría describir con suficiente detalle la actividad y las conexiones de un cerebro para crear un modelo computacional de una persona. A veces se llama <em>emulación cerebral completa</em> o, de forma más popular, “subir la mente”.
-                </p>
-                <p>
-                    No existe hoy una tecnología capaz de transferir recuerdos, identidad o conciencia a una computadora. Además, todavía no sabemos cómo medir la conciencia ni si una simulación sería una experiencia subjetiva real.
-                </p>
-            </div>
-            <figure class="m-0">
-                <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=900&q=85" alt="Imagen médica de un cerebro humano" loading="lazy">
-                <figcaption class="text-center text-sm text-slate-400">El cerebro es más que un conjunto de datos: su actividad cambia constantemente.</figcaption>
+    <nav aria-label="Secciones de la página">
+        <a href="#tema">¿Qué es?</a>
+        <a href="#tecnologias">Tecnologías</a>
+        <a href="#actualidad">Actualidad</a>
+        <a href="#etica">Ética</a>
+    </nav>
+
+    <main>
+        <section id="tema">
+            <h2>¿Qué es la conciencia digitalizada?</h2>
+            <p>La conciencia digitalizada es una idea que propone crear un modelo computacional de una mente humana. Para lograrlo, sería necesario comprender con mucho detalle cómo funciona el cerebro, cómo se conectan sus neuronas y cómo se producen los recuerdos y pensamientos.</p>
+            <p>Actualmente no se puede transferir la conciencia, los recuerdos o la identidad de una persona a una computadora. Por eso, este tema combina investigaciones científicas con preguntas que todavía no tienen respuesta.</p>
+            <figure>
+                <img src="cerebro.jpg" alt="Ilustración médica de un cerebro humano">
+                <figcaption>Imagen relacionada con el estudio del cerebro.</figcaption>
             </figure>
         </section>
 
-        <section class="section-line pt-10">
-            <p class="eyebrow text-center">02 / Cómo podría intentarse</p>
-            <h2 class="mt-2">De las neuronas a un modelo</h2>
-            <div class="mt-8 grid gap-8 md:grid-cols-3">
-                <article class="tech-item">
-                    <p class="step-number">PASO 01</p>
-                    <h3 class="mt-2 text-xl font-bold">Observar señales</h3>
-                    <p>Las interfaces cerebro-computadora registran ciertas señales y las convierten en comandos, por ejemplo, para mover un cursor o controlar una prótesis.</p>
-                </article>
-                <article class="tech-item">
-                    <p class="step-number">PASO 02</p>
-                    <h3 class="mt-2 text-xl font-bold">Mapear conexiones</h3>
-                    <p>La conectómica estudia cómo se enlazan las neuronas. Un mapa completo y funcional del cerebro humano sigue siendo un reto científico enorme.</p>
-                </article>
-                <article class="tech-item">
-                    <p class="step-number">PASO 03</p>
-                    <h3 class="mt-2 text-xl font-bold">Crear simulaciones</h3>
-                    <p>La computación y la inteligencia artificial podrían ayudar a modelar algunos procesos, pero imitar una función no equivale a copiar una mente.</p>
-                </article>
-            </div>
+        <section id="tecnologias">
+            <h2>Tecnologías relacionadas</h2>
+            <h3>Interfaces cerebro-computadora</h3>
+            <p>Estas interfaces registran algunas señales cerebrales y permiten usarlas para realizar tareas específicas, como mover un cursor o controlar una prótesis. No leen todos los pensamientos ni copian una mente.</p>
+            <h3>Inteligencia artificial</h3>
+            <p>La inteligencia artificial puede reconocer patrones en grandes cantidades de datos y ayudar a estudiar ciertos procesos cerebrales. Una simulación de una función no significa que una máquina tenga conciencia.</p>
+            <h3>Estudio de las conexiones neuronales</h3>
+            <p>Los científicos investigan cómo se conectan las neuronas. Hacer un mapa completo y entender cómo funciona el cerebro humano todavía es un gran desafío.</p>
         </section>
 
-        <section class="section-line pt-10">
-            <div class="grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-center">
-                <div>
-                    <p class="eyebrow">03 / Presente y futuro</p>
-                    <h2 class="mt-2">Lo que ya existe no es una mente digital</h2>
-                    <p class="mt-4">Las tecnologías actuales pueden ayudar a interpretar señales cerebrales para tareas concretas. No leen todos los pensamientos, no reconstruyen recuerdos completos ni prueban que una computadora tenga conciencia.</p>
-                </div>
-                <div class="grid gap-6 sm:grid-cols-2">
-                    <article class="tech-item">
-                        <h3 class="text-lg font-bold">Hoy</h3>
-                        <p>Investigación en neurociencia, prótesis controladas por señales y modelos que reconocen patrones específicos.</p>
-                    </article>
-                    <article class="tech-item">
-                        <h3 class="text-lg font-bold">Aún hipotético</h3>
-                        <p>Copiar un cerebro completo, transferir la identidad personal o demostrar que una simulación siente.</p>
-                    </article>
-                </div>
-            </div>
+        <section id="actualidad">
+            <h2>¿Qué es posible hoy?</h2>
+            <p>Hoy existen investigaciones sobre señales cerebrales, prótesis controladas por interfaces y modelos que reconocen patrones concretos. Estos avances pueden ayudar en la medicina y la comunicación.</p>
+            <p>En cambio, copiar por completo un cerebro, transferir la identidad de una persona o comprobar que una copia digital siente son ideas hipotéticas. No son tecnologías disponibles en la actualidad.</p>
         </section>
 
-        <section class="section-line pt-10">
-            <p class="eyebrow">04 / Preguntas que importan</p>
-            <h2 class="mt-2">Desafíos éticos y sociales</h2>
-            <div class="mt-6 grid gap-6 md:grid-cols-2">
-                <article class="tech-item">
-                    <h3 class="text-lg font-bold">Privacidad mental</h3>
-                    <p>¿Quién podría acceder a los datos cerebrales y cómo se protegerían de usos no autorizados?</p>
-                </article>
-                <article class="tech-item">
-                    <h3 class="text-lg font-bold">Identidad y consentimiento</h3>
-                    <p>Si se creara una copia digital, ¿sería la misma persona? ¿Quién tendría derecho a decidir sobre ella?</p>
-                </article>
-                <article class="tech-item">
-                    <h3 class="text-lg font-bold">Acceso y desigualdad</h3>
-                    <p>Una tecnología de alto costo podría ampliar las diferencias entre quienes pueden usarla y quienes no.</p>
-                </article>
-                <article class="tech-item">
-                    <h3 class="text-lg font-bold">Responsabilidad</h3>
-                    <p>Haría falta establecer quién responde por las decisiones y los posibles daños de un sistema que imitara a una persona.</p>
-                </article>
-            </div>
+        <section id="etica">
+            <h2>Preguntas éticas</h2>
+            <ul>
+                <li><strong>Privacidad:</strong> ¿quién podría tener acceso a los datos cerebrales?</li>
+                <li><strong>Identidad:</strong> si se hiciera una copia digital, ¿sería la misma persona?</li>
+                <li><strong>Consentimiento:</strong> ¿quién podría autorizar el uso de los datos de alguien?</li>
+                <li><strong>Desigualdad:</strong> ¿todas las personas tendrían acceso a estas tecnologías?</li>
+            </ul>
         </section>
 
-        <section class="section-line pb-4 pt-10" aria-labelledby="quiz-title">
-            <p class="eyebrow text-center">Comprueba lo aprendido</p>
-            <h2 id="quiz-title" class="mt-2">Una pregunta rápida</h2>
-            <div id="quiz-container" class="mx-auto mt-6 max-w-2xl">
-                <p id="pregunta-texto" class="font-semibold text-slate-100">¿Una interfaz cerebro-computadora demuestra que ya se puede transferir la conciencia?</p>
-                <div class="mt-4 space-y-3">
-                    <button class="quiz-option" type="button" data-correct="false">Sí. Puede registrar señales, así que también puede copiar una mente.</button>
-                    <button class="quiz-option" type="button" data-correct="true">No. Puede decodificar señales limitadas para tareas concretas, no transferir una mente.</button>
-                </div>
-                <p id="resultado-quiz" class="result-text mt-4" aria-live="polite"></p>
-            </div>
+        <section id="fuentes">
+            <h2>Fuentes de consulta</h2>
+            <ul>
+                <li><a href="https://braininitiative.nih.gov/" target="_blank" rel="noopener noreferrer">Iniciativa BRAIN de los Institutos Nacionales de Salud</a></li>
+                <li><a href="https://www.nibib.nih.gov/science-education/science-topics/brain-computer-interfaces" target="_blank" rel="noopener noreferrer">Instituto Nacional de Imagen Biomédica y Bioingeniería: interfaces cerebro-computadora</a></li>
+            </ul>
         </section>
     </main>
 
-    <footer class="section-line mx-auto mt-12 max-w-5xl py-6 text-center">
-        <p class="text-sm">Proyecto Final · Grado Décimo · Revolución Industrial 4.0</p>
+    <footer>
+        <p>Proyecto Final - Grado Décimo | Revolución Industrial 4.0</p>
     </footer>
-
-    <script>
-        const opcionesQuiz = document.querySelectorAll('.quiz-option');
-        const resultadoQuiz = document.getElementById('resultado-quiz');
-
-        opcionesQuiz.forEach((opcion) => {
-            opcion.addEventListener('click', () => {
-                const esCorrecta = opcion.dataset.correct === 'true';
-                opcionesQuiz.forEach((boton) => {
-                    boton.disabled = true;
-                    if (boton.dataset.correct === 'true') boton.classList.add('correct');
-                });
-                if (!esCorrecta) opcion.classList.add('incorrect');
-                resultadoQuiz.textContent = esCorrecta
-                    ? 'Correcto. Las interfaces actuales traducen señales específicas; no leen ni transfieren una conciencia.'
-                    : 'No exactamente. Registrar algunas señales cerebrales no equivale a copiar recuerdos, identidad o conciencia.';
-            });
-        });
-    </script>
 </body>
 </html>
